@@ -23,7 +23,9 @@ class User(Base):
     password=Column(String,nullable=False)
     id =Column(Integer,nullable=False,primary_key=True)
     created_at= Column(TIMESTAMP(timezone=True),nullable=False,server_default=text('now()'))
-    phone_number =Column(Integer,nullable=False)
+    phone_number =Column(Integer,nullable=True)
+    age =Column(String,nullable=True)
+    
 
 class Vote(Base):
     __tablename__ ="votes"
