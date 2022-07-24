@@ -7,6 +7,7 @@ class UserOut(BaseModel):
     id : int
     email: EmailStr
     created_at :datetime
+    phone_number:int
     
     class Config:
         orm_mode = True
